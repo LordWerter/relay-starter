@@ -1,7 +1,7 @@
 {
   "passPerPreset": true,
   "plugins": [
-    ["relay", { "artifactDirectory": "./__relay_artifacts__" }],
+    ["relay", { "artifactDirectory": "./src/__relay_artifacts__" }],
     "@babel/plugin-transform-runtime"
   ],
   "presets": [

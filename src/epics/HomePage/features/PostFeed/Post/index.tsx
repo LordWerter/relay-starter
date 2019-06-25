@@ -1,10 +1,3 @@
-/*
-import ChangePostStatusMutation from '../mutations/ChangeTodoStatusMutation';
-import RemovePostMutation from '../mutations/RemoveTodoMutation';
-import RenamePostMutation from '../mutations/RenameTodoMutation';
-import PostTextInput from './TodoTextInput';
-*/
-
 import * as React from 'react';
 import {
   createFragmentContainer,
@@ -27,10 +20,10 @@ import { Wrapper, ImageSection, Title, Author, Description } from './index.style
 
 
 class Post extends React.Component<IProps> {
-  state = {
+  public state = {
     isEditing: false,
   };
-  private _setEditMode = (shouldEdit: boolean) => {
+  private setEditMode = (shouldEdit: boolean) => {
     this.setState({isEditing: shouldEdit});
   };
   public render() {
@@ -41,13 +34,6 @@ class Post extends React.Component<IProps> {
         <Author>{this.props.post.author}</Author>
         <Description>{this.props.post.description}</Description>
       </Wrapper>
-    );
-  }
-  public render() {
-    return (
-      <div>
-        {renderPost()}
-      </div>
     );
   }
 }
