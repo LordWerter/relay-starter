@@ -7,12 +7,12 @@ import {
   RelayProp,
 } from 'react-relay';
 
-// import { PostFeed_viewer } from '../../../../__relay_artifacts__/PostFeed_viewer.graphql';
+import { PostFeed_viewer } from '../../../../__relay_artifacts__/PostFeed_viewer.graphql';
 import { ChangeEvent } from 'react';
 
 interface IProps {
   relay: RelayProp;
-  viewer: any;
+  viewer: PostFeed_viewer;
 }
 
 class PostFeed extends React.Component<IProps> {

@@ -7,11 +7,11 @@ import {
   RelayProp,
 } from 'react-relay';
 
-// import { HomePage_viewer } from '../../__relay_artifacts__/HomePage_viewer.graphql';
+import { HomePage_viewer } from '../../__relay_artifacts__/HomePage_viewer.graphql';
 
 interface Props {
   relay: RelayProp;
-  viewer: any;
+  viewer: HomePage_viewer;
 }
 
 class HomePage extends React.Component<Props> {

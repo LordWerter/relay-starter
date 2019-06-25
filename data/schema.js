@@ -58,9 +58,21 @@ const GraphQLPost = new GraphQLObjectType({
   name: 'Post',
   fields: {
     id: globalIdField('Post'),
-    text: {
+    title: {
       type: GraphQLString,
-      resolve: (obj) => obj.text,
+      resolve: (obj) => obj.title,
+    },
+    img_url: {
+      type: GraphQLString,
+      resolve: (obj) => obj.img_url,
+    },
+    author: {
+      type: GraphQLString,
+      resolve: (obj) => obj.author,
+    },
+    description: {
+      type: GraphQLString,
+      resolve: (obj) => obj.description,
     },
     complete: {
       type: GraphQLBoolean,

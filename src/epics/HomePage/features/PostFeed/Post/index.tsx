@@ -12,15 +12,15 @@ import {
   RelayProp,
 } from 'react-relay';
 
-// import { Post_post } from '../../../../../__relay_artifacts__/Post_post.graphql';
-// import { Post_viewer } from '../../../../../__relay_artifacts__/Post_viewer.graphql';
+import { Post_post } from '../../../../../__relay_artifacts__/Post_post.graphql';
+import { Post_viewer } from '../../../../../__relay_artifacts__/Post_viewer.graphql';
 import { ChangeEvent } from 'react';
 import { Environment } from 'relay-runtime';
 
 interface IProps {
   relay: RelayProp;
-  post: any;
-  viewer: any;
+  post: Post_post;
+  viewer: Post_viewer;
 }
 
 import { Wrapper, ImageSection, Title, Author, Description } from './index.styles';
