@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   border-radius: 6px;
   background-color: #fff;
   overflow: hidden;
-  margin-top: 10px
+  margin-top: 10px;
 `;
 
 export const ImageSection = styled.div<{imgURL: string}>`

@@ -16,5 +16,10 @@
     "curly": false,
     "object-literal-shorthand": false
   },
-  "rulesDirectory": []
+  "rulesDirectory": [],
+  "linterOptions": {
+    "exclude": [
+        "node_modules"
+    ]
+  }
 }
