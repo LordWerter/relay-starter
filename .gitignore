@@ -1,0 +1,41 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+package-lock.json
+
+# testing
+coverage
+
+#Gitbook
+_book
+
+#Cache
+.cache
+
+# production
+build
+dev-build
+dist
+storybook-build
+.jest-test-results.json
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs
+
+#Development server
+*.log
+
+# Editors
+.vscode
+.idea
+.gitsecret/keys/random_seed
