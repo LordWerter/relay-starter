@@ -1,4 +1,4 @@
-# Relay + Typescript + Styled Components
+# React + GraphQL + Relay + Typescript + Styled Components
 
 ## Installation
 
