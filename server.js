@@ -4,13 +4,17 @@ import path from 'path';
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
 import {schema} from './data/schema';
-import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
+// import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 
 const APP_PORT = 3000;
 const GRAPHQL_PORT = 8080;
 
 const graphQLServer = express();
-graphQLServer.use('/', graphQLHTTP({schema, pretty: true}));
+graphQLServer.use('/', graphQLHTTP({
+  schema,
+  pretty: true,
+  graphiql: true
+}));
 graphQLServer.listen(GRAPHQL_PORT, () => console.log(
   `GraphQL Server is now running on http://localhost:${GRAPHQL_PORT}`
 ));
@@ -43,7 +47,7 @@ const compiler = webpack({
     ],
   },
   plugins: [
-    new ForkTsCheckerWebpackPlugin(),
+    // new ForkTsCheckerWebpackPlugin(),
   ],
   output: {filename: 'app.js', path: '/'},
 });

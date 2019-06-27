@@ -44,9 +44,7 @@ class PostFeed extends React.Component<IProps> {
 export default createFragmentContainer(PostFeed, {
   viewer: graphql`
     fragment PostFeed_viewer on User {
-      posts(
-        first: 2147483647  # max GraphQLInt
-      ) @connection(key: "PostFeed_posts") {
+      posts @connection(key: "PostFeed_posts") {
         edges {
           node {
             id,
